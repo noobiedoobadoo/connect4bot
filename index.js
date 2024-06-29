@@ -298,7 +298,12 @@ function gameLoop() {
     let winner = checkWinner();
     console.log(`Player ${winner} wins!`)
     if (winner) {
-        alert(`Player ${winner} wins!`);
+        if(winner ==2 ){
+            alert(`BOT WINS!`);
+        }
+        else{
+            alert('YOU WIN!')
+        }
         resetGame();
     } else if (isBoardFull()) {
         alert("It's a tie!");
