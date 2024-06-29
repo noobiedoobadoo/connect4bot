@@ -1,0 +1,261 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 230, 153);
+}
+.top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.top-title{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    /* padding-top: 15px; */
+    width: 20%;
+    border: 1px solid burlywood;
+    background-color: antiquewhite;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 1.5rem;
+    font-family: "poppins";
+    font-weight: 500;
+
+}
+.container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); */
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.upper{
+    /* padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 500;
+}
+.refresh{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(43, 42, 42, 0.606);
+    border-radius: 50px;
+    padding: 4px;
+}
+.refresh:hover{
+    cursor: pointer;
+    border: 1px solid rgb(97, 229, 21);
+    padding: 4px;
+}
+
+.text-set{
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 300;
+}
+#open-instruction{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin-bottom: 5px;
+}
+#open-instruction > svg :hover{
+    cursor: pointer;
+}
+.slider-container {
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    width: 450px;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.slider-label {
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.slider {
+    width: 100%;
+}
+
+.difficulty {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+}
+
+
+.box {
+    border-radius: 2px;
+    background-color: aquamarine;
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.you-box {
+    background-color: #ff6666;
+}
+
+.ai-box {
+    background-color: #6666ff;
+}
+
+.uu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.aii {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.player>div>p {
+    margin-left: 10px;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#connect4Canvas {
+    border: 1px solid black;
+    /* Optional: Add a border for better visibility */
+}
+
+
+
+.open-instruction {
+margin: 20px;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+transition: box-shadow 0.3s;
+}
+
+
+.backdrop {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.7);
+z-index: 1;
+}
+
+.instruction {
+display: none;
+border-radius: 8px;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 450px;
+padding: 20px;
+background: white;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+z-index: 2;
+}
+
+.instruction h2 {
+margin-top: 0;
+}
+.instruction li{
+margin-top: 8px;
+}
+
+.instruction button {
+margin-top: 20px;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+
+
+
+.refresh {
+position: relative;
+/* display: inline-block; */
+}
+
+/* Tooltip text */
+.refresh .tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: #555;
+color: #fff;
+text-align: center;
+padding: 5px 0;
+border-radius: 6px;
+
+/* Position the tooltip text */
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+margin-left: -60px;
+
+/* Fade in tooltip */
+opacity: 0;
+transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.refresh .tooltiptext::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.refresh:hover .tooltiptext {
+visibility: visible;
+opacity: 1;
+}
+
+.canvas-container:hover {
+cursor: pointer;
+}

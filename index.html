@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    
+    
+    <div class="top">
+        <!-- Main title -->
+        <div class="top-title">Connect-4 Bot</div>
+    </div>
+    <div class="container">
+        <div class="main-container">
+            <div class="upper">
+                <div class="refresh">
+                    <span class="tooltiptext">Restart Game</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 30 30">
+                        <path d="M 15 3 C 12.031398 3 9.3028202 4.0834384 7.2070312 5.875 A 1.0001 1.0001 0 1 0 8.5058594 7.3945312 C 10.25407 5.9000929 12.516602 5 15 5 C 20.19656 5 24.450989 8.9379267 24.951172 14 L 22 14 L 26 20 L 30 14 L 26.949219 14 C 26.437925 7.8516588 21.277839 3 15 3 z M 4 10 L 0 16 L 3.0507812 16 C 3.562075 22.148341 8.7221607 27 15 27 C 17.968602 27 20.69718 25.916562 22.792969 24.125 A 1.0001 1.0001 0 1 0 21.494141 22.605469 C 19.74593 24.099907 17.483398 25 15 25 C 9.80344 25 5.5490109 21.062074 5.0488281 16 L 8 16 L 4 10 z"></path>
+                    </svg>
+                </div>
+                <div class="player">
+                    <div class="uu">
+                        <div class="you-box box"></div>
+                        <p>You</p>
+                    </div>
+                    <div class="aii">
+                        <div class="ai-box box"></div>
+                        <p>Bot</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="connect4Canvas" width="420" height="360"></canvas>
+            </div>
+
+            
+            <div id="open-instruction">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50">
+                    <path d="M25,2C12.297,2,2,12.297,2,25s10.297,23,23,23s23-10.297,23-23S37.703,2,25,2z M25,11c1.657,0,3,1.343,3,3s-1.343,3-3,3 s-3-1.343-3-3S23.343,11,25,11z M29,38h-2h-4h-2v-2h2V23h-2v-2h2h4v2v13h2V38z"></path>
+                </svg>
+            </div>
+
+            <div id="backdrop" class="backdrop"></div>
+        
+            <div id="instruction" class="instruction">
+                <h2>Game Instructions</h2>
+                <p>Connect 4 is a two-player game where each player takes turns dropping colored discs into a vertical grid. Here are the instructions:</p>
+                <ul>
+                    <li style="display: none;"></li>
+                    <li>The goal is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs.</li>
+                    <li>The game ends when one player achieves this or the grid is completely filled, resulting in a draw if no line is formed.</li>
+                    <li>You can adjust the bot's parameter *using the sliders*</li>
+                </ul>
+                <button id="close-instruction">Close</button>
+            </div>
+
+    
+
+
+            <div class="right">
+                <div class="difficulty">
+                    <div class="offensive">
+                        <div class="slider-container">
+                            <label for="offensive-slider" class="slider-label">Offensive <span class="offensive-text text-set">5</span></label>
+                            <input type="range" id="offensive-slider" class="slider" min="1" max="5" step="1">
+                        </div>
+                    </div>
+                    <div class="defensive">
+                        <div class="slider-container">
+                            <label for="defensive-slider" class="slider-label">Defensive <span class="defensive-text text-set">-4</span></label>
+                            <input type="range" id="defensive-slider" class="slider" min="1" max="5" step="1">
+                        </div>
+                    </div>
+                    <div class="depth">
+                        <div class="slider-container">
+                            <label for="depth-slider" class="slider-label">Game Tree Depth <span class="depth-text text-set">5</span>
+                            </label>
+                            <input type="range" id="depth-slider" class="slider" min="1" max="5" step="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="reset"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
